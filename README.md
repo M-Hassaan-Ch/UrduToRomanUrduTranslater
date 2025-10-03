@@ -1,1 +1,1 @@
-# Urdu to Romand Urdu using LSTM and BiLSTM
+# Urdu to Roman Urdu using LSTM and BiLSTM
