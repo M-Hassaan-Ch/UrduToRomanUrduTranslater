@@ -114,9 +114,9 @@ def load_models():
         # Load tokenizers
         st.info("Loading tokenizers...")
         urdu_tokenizer = spm.SentencePieceProcessor()
-        urdu_tokenizer.load("urdu_tokenizer_char.model")
+        urdu_tokenizer.load("./urdu_tokenizer.model")
         roman_tokenizer = spm.SentencePieceProcessor()
-        roman_tokenizer.load("roman_tokenizer_char.model")
+        roman_tokenizer.load("./roman_tokenizer.model")
         st.success("Tokenizers loaded successfully!")
 
         # Model parameters (same as training)
@@ -154,7 +154,7 @@ def load_models():
         
         # Load trained weights
         st.info("Loading model weights...")
-        model.load_state_dict(torch.load("best_model.pt", map_location=device))
+        model.load_state_dict(torch.load("./seq2seq_best.pt", map_location=device))
         model.eval()
         st.success("Model loaded successfully!")
         
